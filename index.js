@@ -14,9 +14,9 @@ const createDate = function (dates, index) {
     for (let counter = 0; counter < dates.length; counter++) {
       datesResult.push(Date.parse(dates[counter]) / 1000);
     }
-    datesResult = datesResult.sort().join("-");
+    datesResult = String(datesResult.sort().join("-"));
   } else {
-    datesResult = Date.parse(dates[index]) / 1000;
+    datesResult = String(Date.parse(dates[index]) / 1000);
   }
   return datesResult;
 };
